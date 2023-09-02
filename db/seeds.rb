@@ -7,7 +7,7 @@ admin_user = User.create(
     password_confirmation: 'Senha65598',
     role: 'admin'
   )
-  
+  admin_user.add_role :admin
   if admin_user.persisted?
     puts 'Usuário administrador criado com sucesso!'
   else
