@@ -1,0 +1,14 @@
+Rails.application.routes.draw do
+  # Mount Rswag::Api::Engine and DeviseTokenAuth routes
+  mount Rswag::Api::Engine => '/api-docs'
+  mount_devise_token_auth_for 'User', at: 'auth'
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :users, only: [:index, :show, :update, :destroy]
+      # Outras rotas da API aqui...
+    end
+  end
+
+  # Outras rotas da sua aplicação aqui...
+end
