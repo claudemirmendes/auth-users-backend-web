@@ -108,7 +108,6 @@ GEM
     mini_mime (1.1.5)
     minitest (5.19.0)
     msgpack (1.7.2)
-    mysql2 (0.5.5)
     net-imap (0.3.7)
       date
       net-protocol
@@ -122,6 +121,7 @@ GEM
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.5.4)
     psych (5.1.0)
       stringio
     puma (5.6.7)
@@ -191,7 +191,7 @@ DEPENDENCIES
   bootsnap
   debug
   devise_token_auth
-  mysql2 (~> 0.5)
+  pg
   puma (~> 5.0)
   rails (~> 7.0.7, >= 7.0.7.2)
   rolify

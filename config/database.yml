@@ -1,20 +1,21 @@
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
+  username: postgres
   password: MyP@ssw0rd!
+  host: localhost
 
 development:
   <<: *default
-  database: auth-users-development
+  database: auth_users_development
 
 test:
   <<: *default
-  database: auth-users-test
+  database: auth_users_test
 
 production:
   <<: *default
-  database: auth-users-production
-  username: your_production_username
-  password: <%= ENV['YOUR_APP_DATABASE_PASSWORD']%>
+  database: auth_users_production
+  username: auth_users
+  password: <%= ENV['AUTH_USERS_DATABASE_PASSWORD'] %>
