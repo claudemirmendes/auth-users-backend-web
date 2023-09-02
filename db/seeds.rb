@@ -5,7 +5,6 @@ admin_user = User.create(
     email: 'admin@example.com', # Insira o email desejado
     password: 'Senha65598*', # Insira a senha desejada
     password_confirmation: 'Senha65598',
-    role: 'admin'
   )
   admin_user.add_role :admin
   if admin_user.persisted?
