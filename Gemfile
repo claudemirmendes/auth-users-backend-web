@@ -11,6 +11,7 @@ gem 'rswag-ui'
 
 # Use mysql as the database for Active Record
 gem 'pg'
+gem 'rack-cors'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
